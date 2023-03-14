@@ -1,0 +1,131 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    /* googlefonts */
+    max-width: 1280px;
+        /* maximo de largura */
+    margin: 0 auto;
+        /* centralizado horizontalmente */
+}
+
+main:after {
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    /* cssgradiet.io; */
+    z-index: -1;
+}
+
+.conteudo {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 95vh;
+    justify-content: space-evenly;
+}
+
+.informacoes .logo {
+    max-width: 550px;
+    filter: invert(1);
+    margin-bottom: 80px;
+}
+
+.informacoes .descricao {
+    width: 50%;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 30px;
+}
+
+.botoes-carrossel {
+display: flex;
+justify-content: center;
+    /* deixar centralizado */
+gap: 20px;
+    /* espaçamento uniforme */
+}
+
+.botoes-carrossel .botao {
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 30%;
+    /* deixar redondo */
+    border: 2px solid transparent;
+    cursor: pointer;
+    /* efeito click */
+    border-color: #ffffff;
+}
+
+.botoes-carrossel .botao.selecionado {
+    background-color: gray;
+    /* 1d8346 */
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icone {
+    width: 30px;
+    filter: invert(1);
+    transition: 0.2s ease-in-out;
+    /* tipo e duracao do icone */
+}
+
+.menu-lateral .icone:hover {
+    transform: scale(1.2);
+    /* animacao icone barra lateral */
+}
+
+.carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carrossel .imagem {
+    width: 100%;
+    height: 100vh;
+    /* cobrir totalmente a tela */
+    object-fit: cover;
+    /* cobrir a tela de forma proporcional */
+    display: none;
+    animation: mudarImagem 0.7s;
+}
+
+.carrossel .imagem.ativa {
+    display: block;
+}
+
+@keyframes mudarImagem {
+    from{
+        opacity: 0.85;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.assinatura {
+    color: #ffffff;
+}
