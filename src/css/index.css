@@ -61,7 +61,7 @@ gap: 20px;
 }
 
 .botoes-carrossel .botao.selecionado {
-    background-color: gray;
+    background-color: rgb(19, 134, 119);
     /* 1d8346 */
 }
 
